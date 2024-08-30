@@ -1,10 +1,17 @@
 {
-  "name": "${PROJECT_NAME}",
+  "name": "leaflet-tab-remover",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "description": "A Vue 3 plugin to remove tab index from Leaflet map elements",
+  "main": "src/index.js",
+  "keywords": ["vue", "leaflet", "plugin", "accessibility", "tabindex"],
+  "author": "andrew-kras",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrew-kras/leaflet-tab-remover.git"
   },
-  "private": true
+  "bugs": {
+    "url": "https://github.com/andrew-kras/leaflet-tab-remover/issues"
+  },
+  "homepage": "https://github.com/andrew-kras/leaflet-tab-remover#readme"
 }
