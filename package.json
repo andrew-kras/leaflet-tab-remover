@@ -1,6 +1,6 @@
 {
   "name": "leaflet-tab-remover",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Vue 3 plugin to remove tab index from Leaflet map elements",
   "main": "src/index.js",
   "keywords": ["vue", "leaflet", "plugin", "accessibility", "tabindex"],
