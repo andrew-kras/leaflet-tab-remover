@@ -17,11 +17,21 @@ function addLeafletStyles() {
 
 function removeTabIndex() {
     const mapElement = document.querySelector('.leaflet-container');
-    mapElement.setAttribute('tabindex', '-1');
-    const elements = mapElement.querySelectorAll('.leaflet-interactive');
-    elements.forEach(element => {
-        element.setAttribute('tabindex', '-1');
-    });
+    if (mapElement) {
+        mapElement.setAttribute('tabindex', '-1');
+
+        const observer = new MutationObserver(() => {
+            const elements = mapElement.querySelectorAll('.leaflet-interactive');
+            if (elements.length > 0) {
+                elements.forEach(element => {
+                    element.setAttribute('tabindex', '-1');
+                });
+                observer.disconnect();
+            }
+        });
+
+        observer.observe(mapElement, { childList: true, subtree: true });
+    }
 }
 
 export default {
